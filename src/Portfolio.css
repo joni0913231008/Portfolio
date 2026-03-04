@@ -1,26 +1,66 @@
+/* ===== Body & Base ===== */
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    background: #666666;
-    color: white;
+    background: #1c1c1c;
+    color: #f5f5f5;
+    overflow-x: hidden;
 }
 
+/* ===== Portfolio Wrapper ===== */
 .portfolio {
     max-width: 1100px;
     margin: auto;
     padding: 40px 20px;
+    position: relative;
+
+    /* Vertikaler metallischer Shine */
+    background: #1c1c1c;
+    background-image: linear-gradient(
+            180deg,
+            rgba(255,255,255,0.02) 0%,
+            rgba(255,255,255,0.08) 50%,
+            rgba(255,255,255,0.02) 100%
+    );
+    background-size: 100% 200%; /* vertikale Bewegung */
+    animation: metallicShineVertical 30s linear infinite;
 }
 
+/* Vertikales Shine Keyframes */
+@keyframes metallicShineVertical {
+    0% { background-position: 0% -100%; }
+    100% { background-position: 0% 100%; }
+}
+
+/* ===== Panels & Sections ===== */
+.hero,
+.about,
+.projects,
+.links,
+.footer {
+    background-color: rgba(28,28,28,0.85);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== Header & Navigation ===== */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
 }
 
 .logo {
     font-size: 26px;
     font-weight: 600;
+    color: #f5f5f5;
 }
 
 nav a {
@@ -31,22 +71,22 @@ nav a {
 }
 
 nav a:hover {
-    color: white;
+    color: #00ffd0;
 }
 
-.hero {
-    margin-bottom: 100px;
-}
-
+/* ===== Hero ===== */
 .hero h2 {
     font-size: 32px;
     margin-bottom: 10px;
+    letter-spacing: 0.5px;
 }
 
 .hero p {
-    color: #aaa;
+    color: #bbb;
+    font-weight: 300;
 }
 
+/* ===== About ===== */
 .about {
     display: flex;
     align-items: center;
@@ -57,34 +97,44 @@ nav a:hover {
 .profile-pic {
     width: 220px;
     border-radius: 20px;
-    box-shadow: 0 0 25px rgba(0, 255, 150, 0.2);
+    box-shadow: 0 0 20px rgba(0, 255, 150, 0.15);
 }
 
+/* ===== Section Titles ===== */
 .projects h2,
 .links h2 {
     margin-bottom: 40px;
+    color: #f5f5f5;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    letter-spacing: 0.5px;
 }
 
+/* ===== Project Grid & Cards ===== */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
 }
 
 .project-card {
-    background: #1b1b23;
-    border-radius: 18px;
+    background-color: rgba(28,28,28,0.88);
+    border-radius: 16px;
     overflow: hidden;
-    cursor: pointer;
-    transition: 0.3s;
+    cursor: crosshair;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 1;
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
 .project-card.active {
-    border: 1px solid rgba(0, 255, 150, 0.6);
+    border: 1px solid rgba(0, 255, 208, 0.5);
+    box-shadow: 0 0 12px rgba(0,255,208,0.5), 0 6px 20px rgba(0,0,0,0.5);
 }
 
 .project-card img {
@@ -94,12 +144,13 @@ nav a:hover {
 }
 
 .card-content {
-    padding: 20px;
+    padding: 18px;
 }
 
 .card-content p {
-    color: #aaa;
+    color: #bbb;
     font-size: 14px;
+    line-height: 1.5;
 }
 
 .project-details {
@@ -110,16 +161,22 @@ nav a:hover {
 }
 
 @keyframes fade {
-    from { opacity: 0; transform: translateY(-5px); }
+    from { opacity: 0; transform: translateY(-3px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* ===== Socials ===== */
 .socials > * {
-    margin: 0 10px;
+    margin: 0 5px;
+    transition: 0.3s;
 }
 
+.socials > *:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Footer ===== */
 .footer {
     margin-top: 100px;
     text-align: center;
-    color: #666;
 }

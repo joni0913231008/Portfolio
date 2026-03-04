@@ -3,8 +3,9 @@ import "./Portfolio.css";
 import profile from "./assets/Dog1.png";
 import projectImage from "./assets/Dog1.png";
 import { SocialIcon } from "react-social-icons";
-import drink from "./assets/drink.png"
-import finder from "./assets/finder.png"
+import drink from "./assets/drink.png";
+import finder from "./assets/finder.png";
+import aceattourney from "./assets/cover.jpeg";
 
 export default function Portfolio() {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -12,36 +13,40 @@ export default function Portfolio() {
     const projects = [
         {
             id: 1,
-            title: "Never have I ever game",
+            title: "Never Have I Ever",
             image: drink,
-            description: "A game about Questions for a party to spend some time with friends. It is a Game where u have to do a punishment if u refuse from answering the Question given in the promt",
+            description:
+                "A fun party game with daring questions to break the ice and create laughs with friends.",
             details:
-                ""
+                "It is a game where you must perform a punishment if you refuse to answer the question given in the prompt.",
         },
         {
             id: 2,
             title: "Showfinder",
             image: finder,
-            description: "A page which is supposed to help you find a new show to watch based from categories",
+            description:
+                "Discover your next favorite show by exploring categories and recommendations tailored to your taste.",
             details:
-                ""
+                "A web app designed to help users find new shows to watch. Filter by genre, popularity, or personal preferences to get curated suggestions.",
         },
         {
             id: 3,
-            title: "",
-            image: projectImage,
-            description: "",
+            title: "Courtroom Chronicles",
+            image: aceattourney,
+            description:
+                "Step into the shoes of a defense lawyer and solve cases through critical thinking and courtroom drama.",
             details:
-                ""
+                "In this game you are playing as a lawyer and you are trying to free your client of all charges. It is a decision-based game where your choices decide the ending and it contains different difficulty settings.",
         },
         {
             id: 4,
-            title: "",
+            title: "Mood Mixer",
             image: projectImage,
-            description: "",
+            description:
+                "A fun web app that generates stories, playlists, or mini-games based on your mood.",
             details:
-                ""
-        }
+                "Users can select their mood and get personalized recommendations or interactive experiences. Tech used: React, CSS, APIs.",
+        },
     ];
 
     const toggleProject = (id) => {
@@ -50,9 +55,7 @@ export default function Portfolio() {
 
     return (
         <div className="portfolio">
-
             <header className="header">
-                <h1 className="logo">Jonas</h1>
                 <nav>
                     <a href="#about">About</a>
                     <a href="#projects">Projects</a>
@@ -63,18 +66,17 @@ export default function Portfolio() {
             <section className="hero">
                 <div>
                     <h2>Informatiker Applikationsentwicklung</h2>
-                    <p>
-                        2. Lehrjahr IMS · Fokus auf React, Web & Software Development
-                    </p>
+                    <p>2. Lehrjahr IMS · Fokus auf React, Web & Software Development</p>
                 </div>
             </section>
 
             <section className="about" id="about">
                 <img src={profile} alt="Profile" className="profile-pic" />
                 <div>
-                    <h2>Über mich</h2>
+                    <h2>About me</h2>
                     <p>
-                        Ich bin
+                        私はジョルノ・ジョバァーナで、夢を持っている
+
                     </p>
                 </div>
             </section>
@@ -115,7 +117,8 @@ export default function Portfolio() {
             </section>
 
             <footer className="footer">
-                <p>© 2025 André Bernet</p>
+                <p>© 2026 Jonas Schmid</p>
+                <p>jschmid8542@gmail.com</p>
             </footer>
         </div>
     );
