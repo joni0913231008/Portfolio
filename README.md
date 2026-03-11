@@ -1,5 +1,5 @@
 # Jonas Schmid – Portfolio
-<img src="./src/assets/Dog1.png"/>
+<img src="./src/assets/prof.jpeg"/>
 
 ## Projektbeschreibung
 Dies ist mein persönliches **Portfolio**, erstellt, um meine Fähigkeiten in **Webentwicklung**, **React** und **UI/UX Design** zu präsentieren.  

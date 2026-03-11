@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Portfolio.css";
-import profile from "./assets/Dog1.png";
+import profile from "./assets/prof.jpeg";
 import projectImage from "./assets/Dog1.png";
 import { SocialIcon } from "react-social-icons";
 import drink from "./assets/drink.png";
