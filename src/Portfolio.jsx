@@ -75,7 +75,23 @@ export default function Portfolio() {
                 <div>
                     <h2>About me</h2>
                     <p>
-                        私はジョルノ・ジョバァーナで、夢を持っている
+                        <p>
+                            Mein Name ist Jonas Schmid, ich bin 17 Jahre alt und mache eine Ausbildung zum
+                            Informatiker mit der Fachrichtung Applikationsentwicklung. Aktuell besuche ich
+                            das zweite Jahr der IMS.
+
+                            Dieses Portfolio gibt einen Einblick in mich und meine Arbeit. In meiner
+                            Freizeit beschäftige ich mich gerne mit Programmieren und arbeite an eigenen
+                            Ideen, um neue Technologien kennenzulernen und meine Fähigkeiten weiter zu
+                            verbessern.
+
+                            Hier findest du außerdem mehrere Projekte, die ich während der Praxislektionen
+                            entwickelt habe. Wenn du auf ein Projekt klickst, kannst du mehr Details dazu
+                            sehen.
+
+                            Unten auf der Seite findest du außerdem Links zu meinen Kanälen, über die du
+                            mich auch außerhalb des Portfolios erreichen kannst.
+                        </p>
 
                     </p>
                 </div>
