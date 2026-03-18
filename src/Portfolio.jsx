@@ -131,7 +131,6 @@ export default function Portfolio() {
                     <SocialIcon url="https://www.spotify.com" />
                 </div>
             </section>
-
             <footer className="footer">
                 <p>© 2026 Jonas Schmid</p>
                 <p>jschmid8542@gmail.com</p>
